@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif 
+}
+.Home{
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #000000, #000000);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 24px;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 80px;
+    z-index: 99;
+}
+header nav a{
+    margin-left: 80px;
+    color: white;
+    font-size: 26px;
+    transition: .3s;
+}
+header nav .active,
+header nav a:hover{
+    color: #ff495b;
+}
+
+nav {
+    position: absolute;
+    right: 0; /* Aligns navigation to the right edge */
+    top: 10px; /* Adjust vertical position */
+    display: flex;
+    gap: 0.5px; /* Spacing between items */
+    padding-right: 10px; /* Optional: Add space from the edge */
+}
+.Home h1{
+    position: absolute;
+    color: #ff495b;
+    font-size: 50px;
+    z-index: 99;
+}
+.Home img{
+    position: absolute;
+    width: 100%;
+    pointer-events: none;
+}
+.layer{
+    bottom: 0;
+}
+.moon{
+    transform-origin: 50% 100%;
+}
+
+/* Ensure the section takes up the full height of the viewport */
+.Home {
+    position: relative;
+    height: 100vh; /* Full height of the viewport */
+    background-color: #000; /* Background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Style the scroll down arrow */
+.scroll-arrow {
+    position: absolute;
+    bottom: 20px; /* 20px from the bottom of the section */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent; /* Left side of the arrow */
+    border-right: 15px solid transparent; /* Right side of the arrow */
+    border-top: 25px solid #fff; /* The triangle point */
+    animation: bounce 1.5s infinite; /* Bounce animation */
+}
+
+/* Bouncing effect */
+@keyframes bounce {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(10px); /* Move down */
+    }
+    100% {
+        transform: translateX(-50%) translateY(0); /* Return to original position */
+    }
+}
+
+.about {
+    min-height: 100vh;           /* Make the section fill the viewport height */
+    background-color: #000000;   /* Keep the black background */
+    color: #ffffff;              /* Set text color to white */
+    padding: 0 100px;            /* Add horizontal padding */
+    display: flex;               /* Enable flexbox layout */
+    flex-direction: row;         /* Arrange elements side by side */
+    justify-content: space-between; /* Space out text and image */
+    align-items: center;         /* Center content vertically */
+    position: relative;          /* Allow absolute positioning of button */
+    gap: 20px;                   /* Space between text and image */
+}
+
+.about .text {
+    flex: 1;                     /* Allow the text to take up available space */
+}
+
+#about-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    white-space: pre-wrap; /* Keeps line breaks intact */
+    overflow: hidden;
+    border-right: 2px solid black; /* Typewriter caret */
+    animation: blink-caret 0.5s step-end infinite;
+}
+
+.image img {
+    display: block;
+    max-width: 100%; /* Ensures responsiveness */
+    height: auto;
+}
+
+.about .image {
+    flex: 1;                     /* Allow the image to take up available space */
+    display: flex;               /* Center image within its container */
+    justify-content: flex-end;   /* Align image to the right */
+}
+
+.about img {
+    max-width: 100%;             /* Ensure the image scales properly */
+    height: auto;                /* Maintain image aspect ratio */
+}
+
+.button-container {
+    position: absolute;          /* Position the button independently */
+    bottom: 20px;                /* 20px from the bottom of the about section */
+    left: 50%;                   /* Center horizontally */
+    transform: translateX(-50%); /* Center button */
+}
+
+.button {
+    display: inline-block;     /* Make it behave like a button */
+    background-color: #ffffff; /* White background */
+    color: #000000;            /* Black text */
+    text-decoration: none;     /* Remove underline */
+    padding: 10px 20px;        /* Add padding */
+    font-size: 1.2em;          /* Adjust font size */
+    border-radius: 5px;        /* Rounded corners */
+    border: 2px solid #000000; /* Add a border */
+    transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
+    animation: jump 2s ease-in-out infinite; /* Apply continuous jump animation */
+}
+
+/* Hover effect - change color on hover */
+.button:hover {
+    background-color: #ff495b; /* Change background on hover */
+    color: #ffffff;            /* Change text color on hover */
+}
+
+/* Define the keyframes for the natural jump animation */
+@keyframes jump {
+    0% {
+        transform: translateY(0); /* Starting position */
+    }
+    25% {
+        transform: translateY(-10px); /* Move up slightly */
+    }
+    50% {
+        transform: translateY(0); /* Return to original position */
+    }
+    75% {
+        transform: translateY(-7px); /* Move up slightly again */
+    }
+    100% {
+        transform: translateY(0); /* Return to the original position */
+    }
+}
+
+/* Optional: Add a bounce effect on click */
+.button:active {
+    transform: scale(0.95); /* Slight shrink when clicked */
+    transition: transform 0.1s ease-in-out; /* Quick shrink transition */
+}
+
+
